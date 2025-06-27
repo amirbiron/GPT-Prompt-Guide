@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מדריך ChatGPT בעברית</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-right: 5px solid #3498db;
+            padding-right: 15px;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .step-title {
+            display: inline-block;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+
+        .step-subtitle {
+            color: #7f8c8d;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .example-box {
+            background: #f8f9fa;
+            border-right: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .simple-example {
+            background: #e8f5e8;
+            border-right: 4px solid #27ae60;
+        }
+
+        .complex-example {
+            background: #fff3cd;
+            border-right: 4px solid #f39c12;
+        }
+
+        .tip-box {
+            background: linear-gradient(45deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .tip-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .use-case {
+            background: #f1f2f6;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-right: 5px solid #9b59b6;
+        }
+
+        .use-case-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #8e44ad;
+            margin-bottom: 10px;
+        }
+
+        .chatgpt-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .info-box {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .version-tag {
+            background: #e74c3c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .benefit-item {
+            background: linear-gradient(45deg, #a29bfe, #6c5ce7);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .formula-steps {
+            background: linear-gradient(45deg, #fd79a8, #e84393);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .formula-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .formula-step {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+
+        .step-icon {
+            font-size: 1.5rem;
+            margin-left: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .main-title {
+                font-size: 2rem;
+            }
+            
+            .chatgpt-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="main-title">🤖 מדריך ChatGPT המקצועי</h1>
+            <p class="subtitle">כיצד לכתוב פרומפטים יעילים ב-6 שלבים פשוטים</p>
+            
+            <div class="chatgpt-info">
+                <div class="info-box">
+                    <h3>מה זה ChatGPT?</h3>
+                    <p>צ'אטבוט AI שפותח על ידי OpenAI, המיועד להבנה ויצירה של שפה טבעית</p>
+                    <div style="margin-top: 10px;">
+                        <span class="version-tag">GPT-4</span>
+                        <span class="version-tag">GPT-4o</span>
+                        <span class="version-tag">GPT-3.5</span>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h3>מדוע להשתמש ב-ChatGPT?</h3>
+                    <p>עוזר AI שתמיד משתפר ומוכן לסייע במשימות כמו כתיבה, מחקר, קודינג ועוד</p>
+                </div>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-item">יצירת תוכן</div>
+                <div class="benefit-item">תכנות</div>
+                <div class="benefit-item">כתיבה</div>
+                <div class="benefit-item">תרגום</div>
+                <div class="benefit-item">סיכום טקסטים</div>
+                <div class="benefit-item">חינוך</div>
+                <div class="benefit-item">ניתוח נתונים</div>
+                <div class="benefit-item">פיתוח אישי</div>
+                <div class="benefit-item">פרודוקטיביות</div>
+                <div class="benefit-item">מחקר</div>
+            </div>
+        </div>
+
+        <!-- 6-Step Formula -->
+        <div class="card">
+            <div class="formula-steps">
+                <div class="formula-title">נוסחת 6 השלבים לפרומפט מושלם</div>
+                <div class="formula-step">
+                    <span class="step-icon">🎯</span>
+                    <div>
+                        <strong>1. משימה</strong> - הגדר בבירור את המטרה הסופית שלך
+                    </div>
+                </div>
+                <div class="formula-step">
+                    <span class="step-icon">📝</span>
+                    <div>
+                        <strong>2. הקשר</strong> - התאם את התגובה לצרכים שלך
+                    </div>
+                </div>
+                <div class="formula-step">
+                    <span class="step-icon">💡</span>
+                    <div>
+                        <strong>3. דוגמאות</strong> - חקה סגנון, מבנה וטון
+                    </div>
+                </div>
+                <div class="formula-step">
+                    <span class="step-icon">👤</span>
+                    <div>
+                        <strong>4. דמות</strong> - גלם מומחיות ספציפית
+                    </div>
+                </div>
+                <div class="formula-step">
+                    <span class="step-icon">📊</span>
+                    <div>
+                        <strong>5. פורמט</strong> - רשימות, טבלאות, מארק-דאון
+                    </div>
+                </div>
+                <div class="formula-step">
+                    <span class="step-icon">🎭</span>
+                    <div>
+                        <strong>6. טון</strong> - הוסף שכבה של הקשר רגשי
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 1: Task -->
+        <div class="card">
+            <h2 class="section-title">
+                <span class="step-number">1</span>
+                <span class="step-title">משימה</span>
+            </h2>
+            <p class="step-subtitle">הגדר בבירור את המטרה הסופית שלך</p>
+            
+            <div class="example-box simple-example">
+                <strong>פרומפט משימה פשוט:</strong><br>
+                "צור עבורי תוכנית דיאטה לשלושה חודשים"
+            </div>
+            
+            <div class="example-box complex-example">
+                <strong>פרומפט משימה מורכב:</strong><br>
+                "סכם את הנקודות המרכזיות מהמשוב של המשתמשים על הניוזלטר שלי, תוך התמקדות באזורים לשיפור. לאחר מכן קטלג את כל המשוב הנותר לפי סדר עדיפויות"
+            </div>
+
+            <div class="tip-box">
+                <div class="tip-title">💡 טיפ חשוב:</div>
+                תמיד התחל עם פעלי פעולה כמו: צור, כתוב, נתח, סכם וכו'. היה ברור וקצר כדי שהמודל יבין את הדרישות שלך. ככל שההוראה שלך טובה יותר, כך התוצאה תהיה טובה יותר.
+            </div>
+        </div>
+
+        <!-- Step 2: Context -->
+        <div class="card">
+            <h2 class="section-title">
+                <span class="step-number">2</span>
+                <span class="step-title">הקשר</span>
+            </h2>
+            <p class="step-subtitle">התאם את התגובה של ChatGPT עם הקשר</p>
+            
+            <p><strong>שאלות מנחות:</strong></p>
+            <ul style="margin: 15px 0; padding-right: 20px;">
+                <li>מה הרקע של המשתמש? 🤔</li>
+                <li>איך נראית הצלחה? 🎯</li>
+                <li>מה הסביבה/ההקשר? 🌍</li>
+            </ul>
+
+            <div class="example-box">
+                <strong>דוגמה עם הקשר:</strong><br>
+                "אני גבר במשקל 110 ק"ג שמטרתו לרדת 9 ק"ג תוך שלושה חודשים. יש לי זמן לבשל רק פעם בשבוע בימי ראשון למשך שעתיים. צור תוכנית דיאטה לשלושה חודשים שתעזור לי להגיע למטרות שלי במסגרת המגבלות הללו."
+            </div>
+        </div>
+
+        <!-- Step 3: Examples -->
+        <div class="card">
+            <h2 class="section-title">
+                <span class="step-number">3</span>
+                <span class="step-title">דוגמאות</span>
+            </h2>
+            <p class="step-subtitle">חקה סגנון, מבנה וטון</p>
+
+            <div class="example-box">
+                <strong>דוגמה:</strong><br>
+                "אתה מנהל גיוס בצוות השיווק האחראי על כתיבת תיאור התפקיד למשרת מנהל שיווק. הצוות שלך מתמקד בעיקר בהגברת המודעות למותג של פלטפורמת הפרסום של נטפליקס כדי לרכוש שותפים חדשים.
+
+                נסח את תיאור התפקיד באמצעות הפורמט של תיאור התפקיד הקיים הזה: [הדבק דוגמה]"
+            </div>
+
+            <div class="tip-box">
+                <div class="tip-title">🔬 מחקרים מראים:</div>
+                הכללת דוגמאות יכולה לשפר משמעותית את איכות הפלט של ChatGPT
+            </div>
+        </div>
+
+        <!-- Step 4: Persona -->
+        <div class="card">
+            <h2 class="section-title">
+                <span class="step-number">4</span>
+                <span class="step-title">דמות</span>
+            </h2>
+            <p class="step-subtitle">גלם מומחיות או אופי ספציפי</p>
+
+            <div class="example-box simple-example">
+                <strong>לשיקום פציעות:</strong><br>
+                "אתה פיזיותרפיסט המתמחה בשיקום ספורטאים. צור עבורי תוכנית לחודשיים שתעזור לי להתאושש ממרפק הטניס שלי"
+            </div>
+
+            <div class="example-box complex-example">
+                <strong>למחפשי עבודה:</strong><br>
+                "אתה מנהל גיוס בחברת Fortune 500. שאל אותי 20 שאלות כדי לעזור לי להתכונן לראיונות העבודה העתידיים שלי"
+            </div>
+
+            <div class="tip-box">
+                <div class="tip-title">💫 טיפ מתקדם:</div>
+                אתה יכול לגרום ל-ChatGPT להגיב כמו אנשים מפורסמים ספציפיים. דוגמה: "שכתב את הפוסט הזה בסגנון של אמינם"
+            </div>
+        </div>
+
+        <!-- Step 5: Format -->
+        <div class="card">
+            <h2 class="section-title">
+                <span class="step-number">5</span>
+                <span class="step-title">פורמט</span>
+            </h2>
+            <p class="step-subtitle">רשימות, מארק-דאון, טבלאות</p>
+
+            <div class="example-box">
+                <strong>דוגמה: ניתוח משוב קוראים</strong><br>
+                "אספתי משוב קוראים לניוזלטר שלי לאחר עשרות תגובות לשיפורים.
+
+                הוצא בטבלה עם כותרות: משוב מקורי, עדיפות ורמת קושי.
+
+                הנה המשוב: [הדבק משוב כאן]"
+            </div>
+
+            <p style="margin-top: 15px;">בנוסף לטבלאות, פורמטים נוספים ש-ChatGPT יכול ליצור בצורה מושלמת הם רשימות, פורמט אימייל, בלוקי קוד, פסקאות ומארק-דאון.</p>
+        </div>
+
+        <!-- Step 6: Tone -->
+        <div class="card">
+            <h2 class="section-title">
+                <span class="step-number">6</span>
+                <span class="step-title">טון</span>
+            </h2>
+            <p class="step-subtitle">הוסף שכבה של הקשר רגשי</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                <div class="example-box">השתמש בטון מזדמן</div>
+                <div class="example-box">השתמש בטון פורמלי</div>
+                <div class="example-box">תן לי פלט שנון</div>
+                <div class="example-box">הראה התלהבות</div>
+                <div class="example-box">נשמע פסימי</div>
+            </div>
+
+            <p style="margin-top: 15px;">הטון מוסיף שכבה של הקשר רגשי לתגובה. הוא מבטיח שהתוכן יענה על הצרכים המידעיים שלך ויהדהד עם הרגשות והציפיות של הקהל המיועד.</p>
+        </div>
+
+        <!-- Pro Tips -->
+        <div class="card">
+            <h2 class="section-title">💡 טיפים מתקדמים</h2>
+            
+            <div class="use-case">
+                <div class="use-case-title">הפעל זיכרון</div>
+                <p>עבור להגדרות, לחץ על התאמה אישית והפעל את "זיכרון". אפשר ל-ChatGPT לזכור פרטים שאתה חולק בשיחות שונות.</p>
+            </div>
+
+            <div class="use-case">
+                <div class="use-case-title">התאם תגובות אישיות</div>
+                <p>עבור להגדרות > התאמה אישית, ולחץ על "התאם ChatGPT". שתף פרטים על הרקע, התחומי עניין והמטרות שלך כדי ש-ChatGPT יוכל להבין אותך טוב יותר.</p>
+            </div>
+        </div>
+
+        <!-- Use Cases -->
+        <div class="card">
+            <h2 class="section-title">🚀 דוגמאות שימוש מעשיות</h2>
+
+            <div class="use-case">
+                <div class="use-case-title">1. פשט תרשימים מורכבים עם ChatGPT Vision</div>
+                <p>העלה כל תרשים או גרף ל-ChatGPT ובקש הסברים ברורים. מושלם לסטודנטים או כל מי שמתמודד עם נושאים מורכבים.</p>
+                <div class="example-box">
+                    <strong>פרומפט לדוגמה:</strong> "הסבר את התרשים הזה על AI לעומת Machine Learning במילים פשוטות"
+                </div>
+                <div class="tip-box">
+                    <strong>טיפ חם:</strong> המשך לשאול שאלות המשך עד שהמושג ברור לגמרי: "הסבר כאילו אני בן 5, 10, 20 ואז ברמת דוקטורט"
+                </div>
+            </div>
+
+            <div class="use-case">
+                <div class="use-case-title">2. אמן את ChatGPT לכתוב כמוך</div>
+                <p>הזן ל-ChatGPT דוגמאות כתיבה שלך כדי לחקות את הקול והטון הייחודיים שלך.</p>
+                <div class="example-box">
+                    <strong>פרומפט לדוגמה:</strong> "הנה פוסט בלוג שכתבתי. חקה את הסגנון וכתוב פוסט חדש על טרנדים ב-AI"
+                </div>
+            </div>
+
+            <div class="use-case">
+                <div class="use-case-title">3. שדרג את חיפוש העבודה שלך</div>
+                <p>העלה את קורות החיים שלך ובקש מ-ChatGPT משוב כדי לייעל אותם עבור בקשות עבודה ספציפיות.</p>
+                <div class="example-box">
+                    <strong>פרומפט לדוגמה:</strong> "אני מגיש בקשה לתפקיד מנהל שיווק. הנה תיאור התפקיד. סקור את קורות החיים שלי והצע שיפורים"
+                </div>
+            </div>
+
+            <div class="use-case">
+                <div class="use-case-title">4. צור רעיונות עסקיים חדשניים</div>
+                <p>שתף פעולה עם ChatGPT כדי ליצור רעיונות עסקיים חדשים, חדשניים וברי קיימא.</p>
+                <div class="example-box">
+                    <strong>פרומפט לדוגמה:</strong> "איך נוכל לשפר תמיכה בבריאות הנפש באזורים כפריים באמצעות AI?"
+                </div>
+            </div>
+
+            <div class="use-case">
+                <div class="use-case-title">5. למד שפה חדשה עם קול מתקדם</div>
+                <p>למד שפות במהירות על ידי דיבור ישירות עם ChatGPT בזמן אמת.</p>
+                <div class="example-box">
+                    <strong>פרומפט לדוגמה:</strong> "אתה דובר צרפתית יליד. עזור לי להתרגל על הזמנת אוכל במסעדה בצרפתית"
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Plan -->
+        <div class="card">
+            <div class="formula-steps">
+                <div class="formula-title">תוכנית פעולה בת 5 שלבים ליישום AI בחיי היומיום</div>
+                <div class="formula-step">
+                    <span class="step-icon">🎯</span>
+                    <div><strong>קבע מטרה</strong> - בעיה לפתור</div>
+                </div>
+                <div class="formula-step">
+                    <span class="step-icon">🛠️</span>
+                    <div><strong>בחר כלי רלוונטי</strong> - ChatGPT או כלי AI אחר</div>
+                </div>
+                <div class="formula-step">
+                    <span class="step-icon">🔄</span>
+                    <div><strong>נסה וטעה</strong> - או עקוב אחר מדריך</div>
+                </div>
+                <div class="formula-step">
+                    <span class="step-icon">✅</span>
+                    <div><strong>יישם במשימה אמיתית</strong> - בחיים האמיתיים</div>
+                </div>
+                <div class="formula-step">
+                    <span class="step-icon">🤔</span>
+                    <div><strong>הרהר על התהליך</strong> - ותוצאות, היה פתוח ללמוד</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="card" style="text-align: center; background: linear-gradient(45deg, #667eea, #764ba2); color: white;">
+            <h2>🚀 מוכן להתחיל?</h2>
+            <p style="font-size: 1.2rem; margin: 15px 0;">השתמש בנוסחת 6 השלבים והפוך את ChatGPT לעוזר האישי המושלם שלך!</p>
+            <p style="margin-top: 20px; font-style: italic;">זכור: התוצאות הטובות ביותר מגיעות מפרומפטים ברורים, מפורטים ומובנים 💡</p>
+        </div>
+
+        <!-- Credits -->
+        <div class="card" style="text-align: center; background: #f8f9fa; border: 2px solid #e9ecef;">
+            <p style="color: #6c757d; font-size: 0.9rem; margin: 0;">
+                📖 המדריך במקור באנגלית, נכתב על ידי <strong>The Rundown AI, Inc</strong><br>
+                תורגם והותאם לעברית על ידי Claude
+            </p>
+        </div>
+    </div>
+</body>
+</html>
